@@ -1,0 +1,71 @@
+html, body {
+	font-family: 'Open Sans', serif;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.hero.is-success {
+	background: #f2f7fa;
+}
+
+.hero .nav, .hero.is-success .nav {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	display: inline;
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	background: #696b6d;
+}
+
+input {
+	font-weight: 100;
+	margin: 50px, 50px, 50px, 50px;
+}
+
+p {
+	font-weight: 100;
+	margin: 50px, 50px, 50px, 50px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+nav {
+	
+}
+
+li {
+	display: inline;
+	float: left;
+}
+
+li a {
+	display: inline;
+	display: block;
+	color: #696b6d;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+	background-color: #111;
+}
+
+header {
+	width: 100%;
+	height: 100px;
+	display: inline;
+	display: block;
+	background: #696b6d;
+}

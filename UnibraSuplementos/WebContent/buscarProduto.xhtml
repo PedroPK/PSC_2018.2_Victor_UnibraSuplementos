@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:c="http://xmlns.jcp.org/jsf/core">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+<title>Inserir Novo Cliente</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
+	rel="stylesheet"></link>
+<link rel="stylesheet" href="css/bulma.min.css"></link>
+<link rel="stylesheet" type="text/css" href="css/base.css"></link>
+</head>
+
+<header>
+	<div class="container is-fluid">
+
+
+		<nav class="navbar is fixed-top" role="navigation"
+			aria-label="main navigation">
+
+
+			<div id="navbarBasicExample" class="navbar-menu">
+
+				<div class="navbar-start">
+
+					<a class="navbar-item" href="index.html"> Home </a>
+
+					<div class="navbar-item has-dropdown is-hoverable">
+
+
+						<a class="navbar-link"> Vendas </a>
+
+						<div class="navbar-dropdown">
+						
+							<a class="navbar-item" href="vender.xhtml"> Vender </a> 
+							<a class="navbar-item" href="consultarVenda.xhtml"> Buscar Venda </a>
+							<a class="navbar-item" href="alterarVenda.xhtml"> Alterar Venda</a>
+							<a class="navbar-item" href="cancelarVenda.xhtml"> Cancelar Venda</a>
+						</div>
+					</div>
+				
+				<div class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-link"> Categoria </a>
+
+						<div class="navbar-dropdown">
+							<a class="navbar-item" href="categoriaInsert.xhtml"> Adicionar
+							</a> <a class="navbar-item" href="buscarCategoria.xhtml"> Buscar </a>
+							
+							
+						</div>
+					</div>
+				
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-link"> Cliente </a>
+
+						<div class="navbar-dropdown">
+							<a class="navbar-item" href="clienteInsert.xhtml"> Adicionar
+							</a> <a class="navbar-item" href="buscarCliente.xhtml"> Buscar </a>
+							
+							
+						</div>
+					</div>
+
+					
+
+
+					<div class="navbar-item has-dropdown is-hoverable">
+
+						<a class="navbar-link"> Fornecedor </a>
+
+					<div class="navbar-dropdown">
+							<a class="navbar-item" href="fornecedorInsert.xhtml"> Adicionar
+							</a> <a class="navbar-item" href="buscarFornecedor.xhtml"> Buscar </a>
+							
+							
+						</div>
+					</div>
+
+					<div class="navbar-item has-dropdown is-hoverable">
+
+						<a class="navbar-link"> Produto </a>
+
+						<div class="navbar-dropdown">
+							<a class="navbar-item" href="produtoInsert.xhtml"> Adicionar
+							</a> <a class="navbar-item" href="buscarProduto.xhtml"> Buscar </a>
+							
+						</div>
+					</div>
+					<div class="navbar-item has-dropdown is-hoverable">
+
+
+						<a class="navbar-link"> Vendedor </a>
+
+						<div class="navbar-dropdown">
+							<a class="navbar-item" href="vendedorInsert.xhtml"> Adicionar </a>
+							<a class="navbar-item" href="buscarVendedor.xhtml"> Buscar </a> 
+
+						</div>
+					</div>
+
+
+
+					<a href="index.html" class="navbar-item"> Sobre </a>
+
+				</div>
+
+
+			</div>
+
+
+
+
+			<div class="navbar-end">
+				<div class="navbar-item">
+					<div class="buttons">
+						<form action="index.html">
+							<button type="submit" class="button is-danger is-normal is-block">
+								<strong>Sair</strong>
+							</button>
+
+						</form>
+					</div>
+
+
+				</div>
+
+			</div>
+
+		</nav>
+	</div>
+</header>
+<body>
+	<div id="site">
+
+		<section class="hero is-link is-center">
+		<div class="hero-body is-center" id="titulo">
+			<h4 class="title has-text-white" id="titulo">Cliente</h4>
+		</div>
+
+
+		</section>
+
+		<div class="group">
+			<div id="DivA">
+				<div class="container has-text-centered">
+					<div class="column is-4">
+						<p class="subtitle has-text-black">Buscar Clientes</p>
+						<div class="box">
+							<h:form>
+								<div class="field is-grouped">
+									<div class="field-label is-small">
+										<label class="label">CPF:</label>
+									</div>
+									<div class="field-body">
+										<div class="control">
+											<h:inputText class="input is-small "
+												value="#{passageiroMB.passageiro.cpf}" autofocus=""></h:inputText>
+										</div>
+									</div>
+								</div>
+
+								<div class="field is-grouped">
+									<div class="field-label is-small">
+										<label class="label">Nome:</label>
+									</div>
+									<div class="field-body">
+										<div class="control">
+											<h:inputText class="input is-small "
+												value="#{passageiroMB.passageiro.cpf}" autofocus=""></h:inputText>
+										</div>
+									</div>
+								</div>
+
+								<div class="field is-grouped">
+									<div class="field-label is-small">
+										<label class="label">Email:</label>
+									</div>
+									<div class="field-body">
+										<div class="control">
+											<h:inputText class="input is-small " type="email"
+												value="#{passageiroMB.passageiro.cpf}" autofocus=""></h:inputText>
+										</div>
+									</div>
+								</div>
+								<h:commandButton class="button is-block is-info is-normal is-fullwidth"	value="Buscar" action="#{pessoaMB.find}"></h:commandButton>
+							</h:form>
+						</div>
+					</div>
+
+					<div class="column is-4">
+						<p class="subtitle has-text-black">Excluir Cliente</p>
+						<div class="box">
+							<h:form>
+							<div class="field is-grouped">
+									<div class="field-label is-small">
+										<label class="label">Cód.:</label>
+									</div>
+									<div class="field-body">
+										<div class="control">
+											<h:inputText class="input is-small "
+												value="#{passageiroMB.passageiro.cpf}" autofocus=""></h:inputText>
+										</div>
+									</div>
+								</div>
+								<div class="field is-grouped">
+									<div class="field-label is-small">
+										<label class="label">CPF:</label>
+									</div>
+									<div class="field-body">
+										<div class="control">
+											<h:inputText class="input is-small "
+												value="#{passageiroMB.passageiro.cpf}" autofocus=""></h:inputText>
+										</div>
+									</div>
+								</div>
+								<h:commandButton class="button is-block is-info is-normal is-fullwidth"	value="Excluir" action="#{pessoaMB.delete}"></h:commandButton>
+							</h:form>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			<div id="DivLateral2">
+				<div class="container has-text-centered">
+					<div class="column is-8">
+						<p class="subtitle has-text-black	">Listagem de Clientes</p>
+						<div class="box">
+
+
+							<table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+								<thead>
+									<tr>
+										<th>Código</th>
+										<th>Nome</th>
+										<th>CPF</th>
+										<th>Email</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+
+
+									</tr>
+								</tbody>
+							</table>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
